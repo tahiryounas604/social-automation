@@ -1,0 +1,33 @@
+{
+  "bin": {
+    "social-automation": "dist/src/cli.js"
+  },
+  "description": "Schedule and publish social media posts (X, LinkedIn, Instagram, TikTok) with a SQLite queue, a worker loop, a mock provider for demos/tests, and simple analytics.",
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "keywords": [
+    "social-media",
+    "scheduler",
+    "publishing",
+    "sqlite",
+    "typescript"
+  ],
+  "license": "GPL-3.0",
+  "main": "dist/src/index.js",
+  "name": "@tytechlabs/social-automation",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "node src/cli.ts",
+    "start": "node dist/src/cli.js",
+    "test": "node --test test/*.test.ts",
+    "test:built": "npm run build && node --test dist/test/*.test.js"
+  },
+  "type": "module",
+  "types": "dist/src/index.d.ts",
+  "version": "0.1.0"
+}
